@@ -619,69 +619,66 @@ exports.grouplist = [
 		globalonly: true
 	},
 	{
-		symbol: '#',
-		id: "owner",
-		name: "Room Owner",
-		inherit: '&',
-		jurisdiction: 'u',
-		roomleader: true,
-		roomonly: true
-	},
-	{
 		symbol: '&',
 		id: "leader",
 		name: "Leader",
 		inherit: '@',
+		jurisdiction: '@u',
+		promote: 'u',
+		forcewin: true,
+		declare: true,
+		modchatall: true,
+		rangeban: true,
+		potd: true,
+		disableladder: true,
+		globalonly: true,
+		tournamentsmanagement: true
+	},
+	{
+		symbol: '#',
+		id: "owner",
+		name: "Room Owner",
+		inherit: '@',
 		jurisdiction: 'u',
 		roommod: true,
 		roomdriver: true,
-		roomsubdriver: true,
+		declare: true,
+		modchatall: true,
 		roomonly: true,
-		tournamentsmanagement: true,
-		rmall: true
+		tournamentsmanagement: true
 	},
 	{
-		symbol: '-',
-		id: "battleplayer",
-		name: "Battle Player",
-		inherit: ' ',
-		broadcast: true,
-		joinbattle: true,
+		symbol: '\u2605',
+		id: "player",
+		name: "Player",
+		inherit: '+',
 		roomvoice: true,
 		modchat: true,
 		roomonly: true,
 		privateroom: true,
-		modchatall: true
+		joinbattle: true
 	},
 	{
 		symbol: '@',
 		id: "mod",
 		name: "Moderator",
 		inherit: '%',
-		jurisdiction: '@u',
+		jurisdiction: 'u',
 		ban: true,
 		modchat: true,
 		roomvoice: true,
+		forcerename: true,
 		ip: true,
-		modchatall: true,
-		rangeban: true,
-		gdeclare: true,
-		clearall: true,
-		roomplayer: true
+		alts: '@u',
+		tournaments: true
 	},
 	{
 		symbol: '%',
 		id: "driver",
 		name: "Driver",
-		inherit: '=',
-		jurisdiction: 'u'
-	},
-	{
-		symbol: '=',
-		id: "subdriver",
-		name: "Subdriver",
 		inherit: '+',
 		jurisdiction: 'u',
+		announce: true,
 		warn: true,
 		kick: true,
 		mute: true,
@@ -689,34 +686,23 @@ exports.grouplist = [
 		forcerename: true,
 		timer: true,
 		modlog: true,
+		alts: '%u',
 		bypassblocks: 'u%@&~',
 		receiveauthmessages: true,
 		tournamentsmoderation: true,
-		jeopardy: true
+		jeopardy: true,
+		joinbattle: true
 	},
 	{
 		symbol: '+',
 		id: "voice",
 		name: "Voice",
 		inherit: ' ',
-		tournaments: true,
-		voicetourmoderation: true,
-		declare: true,
-		announce: true,
-		ignorelimits: true,
-		poll: true,
-		joinbattle: true
-	},
-	{
-		symbol: '\u2605',
-		id: "player",
-		name: "Player",
-		inherit: ' '
+		broadcast: true
 	},
 	{
 		symbol: ' ',
 		ip: 's',
-		alts: '@u',
-		broadcast: true
+		alts: 's'
 	}
 ];
