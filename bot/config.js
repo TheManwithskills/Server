@@ -4,7 +4,7 @@
 // If you really don't know how to do this... Run `node getserver.js URL`.
 // Fill in the URL of the client where `URL` is.
 // For example: `node getserver.js http://example-server.psim.us/`
-exports.server = 'cbc.pokecommunity.com';
+exports.server = 'http://thermalserver.herokuapp.com-80.psim.us/';
 exports.port = 8000;
 
 // This is the server id.
@@ -13,16 +13,16 @@ exports.port = 8000;
 // For example, on the Smogon server, it will say somewhere in the URL
 // ~~showdown, meaning that the server id is 'showdown'.
 // If you really don't know how to check this... run the said script above.
-exports.serverid = 'pokecommunity';
+exports.serverid = 'thermal';
 
 // The nick and password to log in with
 // If no password is required, leave pass empty
-exports.nick = 'PokeCommBot';
-exports.pass = 'filler';
+exports.nick = 'BeastlyBot';
+exports.pass = 'beast';
 
 // The rooms that should be joined.
 // Joining Smogon's Showdown's Lobby is not allowed.
-exports.rooms = ['lobby', 'darkalley', 'spanish', 'french', 'portuguese', 'hindi'];
+exports.rooms = ['lobby'];
 
 // Any private rooms that should be joined.
 // Private rooms will be moderated differently (since /warn doesn't work in them).
